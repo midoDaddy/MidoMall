@@ -2,11 +2,12 @@
 * @Author: midoDaddy
 * @Date:   2017-09-14 14:31:53
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-18 22:14:08
+* @Last Modified time: 2017-09-18 22:32:20
 */
 var webpack = require('webpack'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    WEBPACK_ENV = process.env.WEBPACK_ENV;
 
 //获取html模板参数
 var getHtmlConfig = function(name) {
@@ -26,6 +27,7 @@ var config = {
     },
     output: {
         path:  './dist',
+        publicPath: '/dist',
         filename: 'js/[name].js'
     },
     plugins: [
@@ -49,8 +51,11 @@ var config = {
                 test: /\.(jpg|png|gif|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
             },
-        ]
-        
+        ]        
     }
+}
+
+if ('dev' === WEBPACK_ENV) {
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088')
 }
 module.exports = config;
