@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-19 10:46:23
+* @Last Modified time: 2017-09-20 09:47:02
 */
 
 var webpack = require('webpack'),
@@ -54,6 +54,15 @@ var config = {
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
             }
         ]
+    },
+    resolve: {
+        alias: {
+            'util': __dirname + '/src/util',
+            'page':  __dirname + '/src/page',
+            'server':  __dirname + '/src/server',
+            'view':  __dirname + '/src/view',
+            'image':  __dirname + '/src/image',
+        }
     }
 }
 
