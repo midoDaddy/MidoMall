@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-22 12:02:34
+* @Last Modified time: 2017-09-22 22:04:48
 */
 
 var webpack = require('webpack'),
@@ -38,10 +38,12 @@ var config = {
             name: 'common',
             filename: 'js/common.js'
         }),
+        //css单独打包
+        new ExtractTextPlugin('css/[name].css'),
         //html模板
         new HtmlWebpackPlugin(getHtmlConfig('index')),
-        //css单独打包
-        new ExtractTextPlugin('css/[name].css')
+        new HtmlWebpackPlugin(getHtmlConfig('login')),
+        
     ],
     module: {
         loaders: [
@@ -59,7 +61,7 @@ var config = {
         alias: {
             util: __dirname + '/src/util',
             page:  __dirname + '/src/page',
-            server:  __dirname + '/src/server',
+            service:  __dirname + '/src/service',
             view:  __dirname + '/src/view',
             image:  __dirname + '/src/image',
             node_modules:  __dirname + '/node_modules',
