@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-20 09:39:21
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-20 16:59:00
+* @Last Modified time: 2017-09-25 12:43:44
 */
 var config = {
     serverHost: ''
@@ -66,12 +66,12 @@ var _util = {
 
     //成功提示
     successTip: function(msg) {
-        alert(msg || '操作成功')
+        console.log(msg || '操作成功')
     },
 
     //错误提示
     errorTip: function(msg) {
-        alert(msg || '操作失败')
+        console.log(msg || '操作失败')
     },
 
     //通用验证

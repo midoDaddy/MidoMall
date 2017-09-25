@@ -1,0 +1,26 @@
+/*
+* @Author: midoDaddy
+* @Date:   2017-09-25 10:56:07
+* @Last Modified by:   midoDaddy
+* @Last Modified time: 2017-09-25 11:00:32
+*/
+.nav-side-list {
+    float: left;
+    width: 130px;
+    min-height: 100px;
+}
+.nav-side-item {
+    line-height: 30px;
+    font-size: 13px;
+}
+.nav-side-item .link {
+    color: #888;
+}
+.nav-side-item.active .link {
+    color: #c60023;
+}
+/* 右侧内容区 */
+.content.with-nav {
+    float: left;
+    width: 950px;
+}
