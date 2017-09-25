@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-22 22:04:48
+* @Last Modified time: 2017-09-25 10:54:17
 */
 
 var webpack = require('webpack'),
@@ -54,7 +54,11 @@ var config = {
             {
                 test: /\.(gif|png|jpg|woff|ttf|svg|eot)\??.*$/,
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
-            }
+            },
+            {
+                test: /\.string$/,
+                loader: 'html-loader'
+            },
         ]
     },
     resolve: {
