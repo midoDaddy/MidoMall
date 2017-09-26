@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-22 22:01:35
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 15:57:36
+* @Last Modified time: 2017-09-26 17:04:55
 */
 var _util = require('util/main.js');
 var _user = {
@@ -45,6 +45,16 @@ var _user = {
             url: _util.getServerUrl('/user/check_valid.do'),
             method: 'POST',
             data: userInfo,
+            success: resolve,
+            error: reject
+        })
+    },
+
+    //获取用户信息
+    getUserInfo: function(resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/get_user_info.do'),
+            method: 'POST',
             success: resolve,
             error: reject
         })

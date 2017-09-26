@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 15:13:32
+* @Last Modified time: 2017-09-26 16:19:28
 */
 
 var webpack = require('webpack'),
@@ -28,7 +28,8 @@ var config = {
         'index'         : ['./src/page/index/index.js'],
         'result'        : ['./src/page/result/index.js'],
         'user-login'    : ['./src/page/user-login/index.js'],
-        'user-register' : ['./src/page/user-register/index.js']
+        'user-register' : ['./src/page/user-register/index.js'],
+        'user-center'   : ['./src/page/user-center/index.js']
         
     },
     output: {
@@ -48,7 +49,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果提示')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
-        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册'))
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心'))
         
         
     ],
