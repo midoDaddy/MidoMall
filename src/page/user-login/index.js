@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:48:07
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 15:07:30
+* @Last Modified time: 2017-09-26 15:33:57
 */
 require('./index.css');
 require('page/common/nav-simple/index.js')
@@ -43,12 +43,12 @@ var page = {
         };
         //获取前端验证结果
         var result = this.validateForm(userInfo);
+        console.log(result)
         //前端验证成功，则请求后端接口，失败则提示
         if (result.status) {
             //后端请求成功则回跳，失败则提示
             _user.login(userInfo, function(res) {
-                var redirect = decodeURIComponent(_util.getUrlParam('redirect'));
-                errorTip.hide();       
+                var redirect = decodeURIComponent(_util.getUrlParam('redirect'));     
                 window.location.href = redirect || './index.html';
             }, function(errMsg) {
                 errorTip.show(errMsg);
@@ -66,11 +66,11 @@ var page = {
         }
         if (!_util.validate(userInfo.username, 'required')) {
             result.msg = '用户名不能为空';
-            return;
+            return result;
         }
         if (!_util.validate(userInfo.password, 'required')) {
             result.msg = '密码不能为空';
-            return;
+            return result;
         }
         result.status = true;
         return result;
