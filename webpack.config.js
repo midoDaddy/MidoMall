@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-25 12:48:38
+* @Last Modified time: 2017-09-26 11:26:30
 */
 
 var webpack = require('webpack'),
@@ -26,7 +26,7 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/index.js'],
+        'user-login': ['./src/page/user-login/index.js'],
         'result': ['./src/page/result/index.js']
     },
     output: {
@@ -44,7 +44,7 @@ var config = {
         new ExtractTextPlugin('css/[name].css'),
         //html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果提示')),
         
     ],

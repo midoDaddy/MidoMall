@@ -1,0 +1,48 @@
+
+user-service
+用户登录： /user/login.do
+用户注册： /user/register.do
+验证用户名： /user/check_valid.do
+获取用户密码提示问题： /user/forget_get_question.do
+检查密码提示问题答案： /user/forget_check_answer.do
+更新密码： /user/forget_reset_password.do
+获取用户信息： /user/get_information.do
+更新用户信息： /user/update_information.do
+修改密码： /user/reset_password.do
+登出： /user/logout.do
+检查登录状态： /user/get_user_info.do
+
+
+cart-service
+获取购物车商品数量: /cart/get_cart_product_count.do
+获取购物车商品列表: /cart/list.do
+选择商品： /cart/select.do
+取消选择商品： /cart/un_select.do
+商品全选： /cart/select_all.do
+取消商品的全选： /cart/un_select_all.do
+更新商品数量： /cart/update.do
+删除商品： /cart/delete_product.do
+
+
+address-service
+获取地址列表： /shipping/list.do
+保存收件人信息： /shipping/add.do
+更新收件人信息： /shipping/update.do
+删除收件人信息： /shipping/del.do
+获取收件人信息： /shipping/select.do
+
+
+order-service
+获取商品列表： /order/get_order_cart_product.do
+创建订单： /order/create.do
+获取订单列表： /order/list.do
+获取商品详情信息： /order/detail.do
+取消订单： /order/cancel.do
+获取支付信息： /order/pay.do
+获取订单状态： /order/query_order_pay_status.do
+
+
+product-service
+获取产品列表： /product/list.do
+获取商品详情信息： /product/detail.do
+加入购物车： /cart/add.do

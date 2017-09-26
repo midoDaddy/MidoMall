@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-25 10:56:01
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-25 11:35:23
+* @Last Modified time: 2017-09-26 14:47:44
 */
 require('./index.css');
 var _util = require('util/main.js'),
@@ -28,7 +28,6 @@ var navSide = {
                 item.isActive = true;
             }
         });
-        console.log(this.option.navList)
         var navHtml = _util.renderHtml(template, {
             navList: this.option.navList
         });

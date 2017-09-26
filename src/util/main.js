@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-20 09:39:21
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-25 12:43:44
+* @Last Modified time: 2017-09-26 12:23:39
 */
 var config = {
     serverHost: ''
@@ -27,7 +27,7 @@ var _util = {
                     _this.doLogin();
                 }
                 //数据请求失败
-                else if (10 === res.status) {
+                else if (1 === res.status) {
                     typeof param.error === 'function' && param.error(res.msg)
                 }
             },
