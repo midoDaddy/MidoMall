@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-26 15:09:30
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 15:58:06
+* @Last Modified time: 2017-09-26 22:48:49
 */
 require('./index.css');
 require('page/common/nav-simple/index.js')
@@ -57,7 +57,7 @@ var page = {
             password        : $.trim($('#password').val()),
             passwordConfirm : $.trim($('#password-confirm').val()),
             phone           : $.trim($('#phone').val()),
-            mail            : $.trim($('#mail').val()),
+            email            : $.trim($('#email').val()),
             question        : $.trim($('#question').val()),
             answer          : $.trim($('#answer').val())
         };
@@ -106,7 +106,7 @@ var page = {
             result.msg = '手机号格式不正确';
             return result;
         }
-        if (!_util.validate(userInfo.mail, 'mail')) {
+        if (!_util.validate(userInfo.email, 'mail')) {
             result.msg = '邮箱格式不正确';
             return result;
         }

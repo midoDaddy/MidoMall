@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-20 09:39:21
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 12:23:39
+* @Last Modified time: 2017-09-26 22:51:44
 */
 var config = {
     serverHost: ''
@@ -39,7 +39,7 @@ var _util = {
     
     //统一登录处理
     doLogin: function() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href)
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href)
     },
 
     //返回首页
@@ -66,12 +66,12 @@ var _util = {
 
     //成功提示
     successTip: function(msg) {
-        console.log(msg || '操作成功')
+        alert(msg || '操作成功')
     },
 
     //错误提示
     errorTip: function(msg) {
-        console.log(msg || '操作失败')
+        alert(msg || '操作失败')
     },
 
     //通用验证

@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-22 22:01:35
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 17:04:55
+* @Last Modified time: 2017-09-26 22:58:04
 */
 var _util = require('util/main.js');
 var _user = {
@@ -53,8 +53,19 @@ var _user = {
     //获取用户信息
     getUserInfo: function(resolve, reject) {
         _util.request({
-            url: _util.getServerUrl('/user/get_user_info.do'),
+            url: _util.getServerUrl('/user/get_information.do'),
             method: 'POST',
+            success: resolve,
+            error: reject
+        })
+    },
+
+    //更新用户信息
+    updateUserInfo: function(userInfo, resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/update_information.do'),
+            method: 'POST',
+            data: userInfo,
             success: resolve,
             error: reject
         })
