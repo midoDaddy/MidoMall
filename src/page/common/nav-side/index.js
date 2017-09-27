@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-25 10:56:01
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 14:47:44
+* @Last Modified time: 2017-09-27 12:19:06
 */
 require('./index.css');
 var _util = require('util/main.js'),
@@ -15,6 +15,7 @@ var navSide = {
             navList: [
                 {name: 'order-list', desc: '我的订单', href: './order-list.html'},
                 {name: 'user-center', desc: '个人中心', href: './user-center.html'},
+                {name: 'password-update', desc: '修改密码', href: './password-update.html'},
                 {name: 'about', desc: '关于我们', href: './about.html'}
             ]
         }
