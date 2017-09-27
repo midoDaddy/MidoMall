@@ -3,7 +3,7 @@
 <<<<<<< HEAD
 * @Date:   2017-09-20 09:39:21
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-26 22:51:44
+* @Last Modified time: 2017-09-27 10:58:44
 */
 var config = {
     serverHost: ''
@@ -14,11 +14,11 @@ var _util = {
     request: function(param) {
         var _this = this;
         $.ajax({
-            method: param.method || 'get',
-            dataType: param.type || 'json',
-            url: param.url || '',
-            data: param.data || '',
-            success: function(res) {
+            method      : param.method || 'get',
+            dataType    : param.type || 'json',
+            url         : param.url || '',
+            data        : param.data || '',
+            success : function(res) {
                 //请求成功
                 if (0 === res.status) {
                     typeof param.success === 'function' && param.success(res.data, res.msg)
@@ -32,7 +32,7 @@ var _util = {
                     typeof param.error === 'function' && param.error(res.msg)
                 }
             },
-            error: function(err) {
+            error : function(err) {
                 typeof param.error === 'function' && param.error(err.statusText)
             }
         })
@@ -94,39 +94,4 @@ var _util = {
 }
 
 module.exports = _util;
-=======
-* @Date:   2017-09-19 17:51:53
-* @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-19 22:45:04
-*/
-var util = {
-    request: function(param){
-        var _this = this;
-        $.ajax({
-            method      : param.method  || 'get',
-            url         : param.url     || '',
-            data        : param.data    || '',
-            dataType    : param.type    || 'json',
-            success: function(res) {
-                if (0 === res.status) {
-                    typeof param.success === 'function' && param.success(res.data, res.msg);
-                }
-                else if (10 === res.status) {
-                    _this.doLogin();
-                }
-                else if (1 === res.status) {
-                    typeof param.error === 'function' && param.error(res.msg);
-                }
-            },
-            error: function(err) {
-                typeof param.error === 'function' && param.error(err.statusText);
-            }
-        })
-    },
-    doLogin: function() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href)
-    }
-}
 
-module.exports = util;
->>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
