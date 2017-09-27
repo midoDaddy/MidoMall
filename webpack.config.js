@@ -3,7 +3,7 @@
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
 <<<<<<< HEAD
-* @Last Modified time: 2017-09-27 12:34:37
+* @Last Modified time: 2017-09-27 14:20:32
 =======
 * @Last Modified time: 2017-09-19 17:58:08
 >>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
@@ -35,7 +35,8 @@ var config = {
         'user-register'         : ['./src/page/user-register/index.js'],
         'user-center'           : ['./src/page/user-center/index.js'],
         'user-center-update'    : ['./src/page/user-center-update/index.js'],
-        'user-pass-update'      : ['./src/page/user-pass-update/index.js']
+        'user-pass-update'      : ['./src/page/user-pass-update/index.js'],
+        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js']
         
     },
     output: {
@@ -59,6 +60,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '编辑用户信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),       
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),       
     ],
     module: {
         loaders: [
