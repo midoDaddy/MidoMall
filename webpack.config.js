@@ -2,7 +2,11 @@
 * @Author: midoDaddy
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
+<<<<<<< HEAD
 * @Last Modified time: 2017-09-26 18:09:10
+=======
+* @Last Modified time: 2017-09-19 17:58:08
+>>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
 */
 
 var webpack = require('webpack'),
@@ -75,12 +79,19 @@ var config = {
     },
     resolve: {
         alias: {
+<<<<<<< HEAD
             util        : __dirname + '/src/util',
             page        : __dirname + '/src/page',
             service     : __dirname + '/src/service',
             view        : __dirname + '/src/view',
             image       : __dirname + '/src/image',
             node_modules: __dirname + '/node_modules',
+=======
+            'util': __dirname + '/src/util',
+            'page': __dirname + '/src/page',
+            'server': __dirname + '/src/server',
+            'view': __dirname + '/src/view',           
+>>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
         }
     }
 }
