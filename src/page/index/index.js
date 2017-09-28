@@ -3,14 +3,14 @@
 * @Date:   2017-09-19 09:47:45
 * @Last Modified by:   midoDaddy
 <<<<<<< HEAD
-* @Last Modified time: 2017-09-28 18:18:33
+* @Last Modified time: 2017-09-28 22:52:16
 */
 require('./index.css');
 require('page/common/header/index.js');
 require('util/unslider/index.js');
+require('page/common/nav/index.js');
 
-var _util = require('util/main.js'),
-    nav = require('page/common/nav/index.js');
+var _util = require('util/main.js');
 
 $(function() {
 

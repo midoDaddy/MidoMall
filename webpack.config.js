@@ -3,7 +3,7 @@
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
 <<<<<<< HEAD
-* @Last Modified time: 2017-09-27 14:20:32
+* @Last Modified time: 2017-09-28 22:48:44
 =======
 * @Last Modified time: 2017-09-19 17:58:08
 >>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
@@ -30,6 +30,7 @@ var config = {
     entry: {
         'common'                : ['./src/page/common/index.js'],
         'index'                 : ['./src/page/index/index.js'],
+        'list'                  : ['./src/page/list/index.js'],
         'result'                : ['./src/page/result/index.js'],
         'user-login'            : ['./src/page/user-login/index.js'],
         'user-register'         : ['./src/page/user-register/index.js'],
@@ -54,6 +55,7 @@ var config = {
         new ExtractTextPlugin('css/[name].css'),
         //html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果提示')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
