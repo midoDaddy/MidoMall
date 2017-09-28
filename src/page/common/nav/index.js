@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-22 17:00:05
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-23 07:51:09
+* @Last Modified time: 2017-09-28 17:39:02
 */
 require('./index.css');
 var _util = require('util/main.js'),
@@ -42,7 +42,7 @@ var nav = {
             $('.user-not-login').hide().siblings('.user-login').show()
                 .find('.username').text(res.username);
         }, function(errMsg) {
-            _util.errorTip(errMsg)
+            /*do nothing*/
         })
     },
 
