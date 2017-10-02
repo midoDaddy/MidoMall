@@ -3,7 +3,7 @@
 <<<<<<< HEAD
 * @Date:   2017-09-20 09:39:21
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-27 10:58:44
+* @Last Modified time: 2017-10-02 23:17:28
 */
 var config = {
     serverHost: ''
@@ -56,7 +56,7 @@ var _util = {
     //获取url参数
     getUrlParam: function(name) {
         var pattern = new RegExp('(^|&)' + name + '=([^&]*)(&|$)'),
-            result = window.location.search.substr(1).match(pattern);
+            result = decodeURIComponent(window.location.search).substr(1).match(pattern);
         return result ? result[2] : null;
     },
 
