@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-09-28 22:56:11
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-09-28 23:29:38
+* @Last Modified time: 2017-10-09 16:02:14
 */
 
 var _util = require('util/main.js');
@@ -14,6 +14,16 @@ var _product = {
         _util.request({
             url: _util.getServerUrl('/product/list.do'),
             data: listParam,
+            success: resolve,
+            error: reject
+        })
+    },
+
+    //获取产品详情信息
+    getProudctDetail:  function(productInfo, resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/product/detail.do'),
+            data: productInfo,
             success: resolve,
             error: reject
         })
