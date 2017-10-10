@@ -3,7 +3,7 @@
 * @Date:   2017-09-19 09:43:36
 * @Last Modified by:   midoDaddy
 <<<<<<< HEAD
-* @Last Modified time: 2017-10-09 15:42:47
+* @Last Modified time: 2017-10-10 09:47:43
 =======
 * @Last Modified time: 2017-09-19 17:58:08
 >>>>>>> 0b7d680709e6471868628852425112cc3777cdc3
@@ -32,14 +32,14 @@ var config = {
         'index'                 : ['./src/page/index/index.js'],
         'list'                  : ['./src/page/list/index.js'],
         'detail'                : ['./src/page/detail/index.js'],
+        'cart'                  : ['./src/page/cart/index.js'],
         'result'                : ['./src/page/result/index.js'],
         'user-login'            : ['./src/page/user-login/index.js'],
         'user-register'         : ['./src/page/user-register/index.js'],
         'user-center'           : ['./src/page/user-center/index.js'],
         'user-center-update'    : ['./src/page/user-center-update/index.js'],
         'user-pass-update'      : ['./src/page/user-pass-update/index.js'],
-        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js']
-        
+        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js']       
     },
     output: {
         path        : './dist',
@@ -58,6 +58,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果提示')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
