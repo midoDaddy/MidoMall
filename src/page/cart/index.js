@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-10-10 09:44:08
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-10-10 21:40:21
+* @Last Modified time: 2017-10-11 09:58:25
 */
 require('./index.css');
 require('page/common/header/index.js');
@@ -129,7 +129,7 @@ var page = {
             if (count >= maxCount) {
                 alert('库存不足');
             }
-            count = Math.min(Math.max(count, 0), maxCount);
+            count = Math.min(Math.max(count, 1), maxCount);
             _cart.updateCount({
                 productId: productId,
                 count: count
