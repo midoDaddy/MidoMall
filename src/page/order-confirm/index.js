@@ -2,7 +2,7 @@
 * @Author: midoDaddy
 * @Date:   2017-10-11 10:10:52
 * @Last Modified by:   midoDaddy
-* @Last Modified time: 2017-11-02 17:14:23
+* @Last Modified time: 2017-11-03 16:20:32
 */
 require('./index.css');
 require('page/common/header/index.js');
@@ -11,7 +11,7 @@ require('page/common/nav/index.js');
 var _util               = require('util/main.js'),
     _order              = require('service/order-service.js'),
     _address            = require('service/address-service.js'),
-    addressModal       = require('./address-modal.js'),
+    addressModal        = require('./address-modal.js'),
     productTemplate     = require('./product-list.string'),
     addressTemplate     = require('./address-list.string');
 
